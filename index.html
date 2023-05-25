@@ -240,7 +240,7 @@
   <br />
 
 
-  <div style="width:800px; margin:0 auto; text-align:justify">The analysis and use of egocentric videos for robotic tasks is made challenging by occlusion due to the hand and the visual mismatch between the human hand and a robot end-effector. In this sense, the human hand presents a nuisance. However, often hands also provide a valuable signal, e.g. the hand pose may suggest what kind of object is being held. In this work, we propose to extract a factored representation of the scene that separates the agent (human hand) and the environment. This alleviates both occlusion and mismatch while preserving the signal, thereby easing the design of models for downstream robotics tasks. At the heart of this factorization is our proposed Video Inpainting via Diffusion Model (VIDM) that leverages both a prior on real-world images (through a large-scale pre-trained diffusion model) and the appearance of the object in earlier frames of the video (through attention). Our experiments demonstrate the effectiveness of VIDM at improving the in-painting quality in egocentric videos and the power of our factored representation for numerous tasks: object detection, 3D reconstruction of manipulated objects, and learning of reward functions, policies, and affordances from videos.</div>
+  <div style="width:800px; margin:0 auto; text-align:justify">The analysis and use of egocentric videos for robotic tasks is made challenging by occlusion due to the hand and the visual mismatch between the human hand and a robot end-effector. In this sense, the human hand presents a nuisance. However, often hands also provide a valuable signal, e.g. the hand pose may suggest what kind of object is being held. In this work, we propose to extract a factored representation of the scene that separates the agent (human hand) and the environment. This alleviates both occlusion and mismatch while preserving the signal, thereby easing the design of models for downstream robotics tasks. At the heart of this factorization is our proposed Video Inpainting via Diffusion Model (VIDM) that leverages both a prior on real-world images (through a large-scale pre-trained diffusion model) and the appearance of the object in earlier frames of the video (through attention). Our experiments demonstrate the effectiveness of VIDM at improving inpainting quality on egocentric videos and the power of our factored representation for numerous tasks: object detection, 3D reconstruction of manipulated objects, and learning of reward functions, policies, and affordances from videos.</div>
   <br />
 
   <hr />
@@ -299,7 +299,7 @@ effective transfer across embodiments.</div>
     <h1>Video Inpainting Diffusion Model (VIDM)</h1>
   </center>
   <div style="width:800px; margin:0 auto; text-align:justify">
-We extend pre-trained single-frame inpainting diffusion models to videos. Features from context frames are introduced as additional inputs into the Attention Block A. We repeat the cross-frame attention block 8 times (4 to encode and 4 to decode) to construct the U-Net that conducts 1 step of denoising. The U-Net operates in the VQ encoder latent space.
+We extend pre-trained single-frame inpainting diffusion models to videos. Features from context frames are introduced as additional inputs into the Attention Block A. We repeat the multi-frame attention block 8 times (4 to encode and 4 to decode) to construct the U-Net that conducts 1 step of denoising. The U-Net operates in the VQ encoder latent space.
   </div>
   <br />
   <p style="margin-top:4px;">
